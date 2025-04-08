@@ -1,12 +1,16 @@
 /**
  * Lab 4: Bank Account
- * This program contains methods for a BankAccount class for users to deposit,withdraw, return the balance and return a statement with all transactions.It also uses the Calendar class to record the date and time of each transaction.
+ * This program contains methods for a BankAccount class for users to deposit,
+ * withdraw, return the balance and return a statement with all transactions.
+ * It also uses the Calendar class to record the date and time of each transaction.
+ *
  * @author Shun Lett Pyae Oo (constructors)
  * @author Zaing Thint Myat (methods to deposit, withdraw, return the balance and return a statement with all transactions)
  */
+import java.util.Calendar;
 
 /**
- * The BankAccount class has methods to deposit, withdraw, check the balance and transaction with date and time.
+ * The BankAccount class has methods to deposit, withdraw, check the balance,and keep a record of transactions with date and time.
  */
 public class BankAccount {
     private String accountNumber;
@@ -17,8 +21,8 @@ public class BankAccount {
      * constructor that initializes the account with zero balance.
      * @param accountNumber The account number assigned to this account.
      */
-    public BankAccount(String accountNumber) {
-        this.accountNumber = accountNumber;
+    public BankAccount(int accountNumber) {
+        this.accountNumber = Integer.toString(accountNumber);
         this.balance = 0.0;
         this.transactions = new StringBuilder();
         logTransaction("Account created with balance: $0.0");
